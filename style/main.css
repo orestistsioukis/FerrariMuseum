@@ -1,1 +1,11 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+* {
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  height: 100%;
+  font-family: 'Montserrat';
+}
+/*# sourceMappingURL=main.css.map */
