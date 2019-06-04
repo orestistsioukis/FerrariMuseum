@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+$colors: (
+    headerNav: #1C0D0D,
+    footerNav: #1C0D0D,
+    primary: #fff,
+    main: green,
+);
+
+@function color($colorsnames) {
+    @return map-get($colors, $colorsnames);
+}
+
+* {
+    margin: 0;
+    text-decoration: none;
+}
+
+body {
+    height: 100%;
+    font-family: 'Montserrat';
+}
+
