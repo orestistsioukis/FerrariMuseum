@@ -1,11 +1,184 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
 * {
   margin: 0;
+  padding: 0;
   text-decoration: none;
 }
 
-body {
+html, body {
   height: 100%;
   font-family: 'Montserrat';
+}
+
+main {
+  min-height: 100%;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  padding: 1em;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  width: calc(100% - 2em);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #1c0d0d;
+}
+
+header a {
+  color: #fff;
+}
+
+header a.maintitle {
+  font-weight: bold;
+  text-transform: lowercase;
+}
+
+header img.menuopenbutton {
+  width: 15px;
+  height: 15px;
+}
+
+header nav.menucontainer {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 40;
+  width: 50%;
+  height: 100vh;
+  background-color: #1c0d0d;
+}
+
+header nav.menucontainer img.menuclosebutton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+}
+
+header nav.menucontainer img.ferrarimenulogo {
+  display: block;
+  margin: 60px auto 0 auto;
+  width: 8em;
+  height: 8em;
+}
+
+header nav.menucontainer ul {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 60px;
+}
+
+header nav.menucontainer ul li {
+  list-style: none;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  text-align: center;
+  margin: 1em;
+  padding: 1em;
+  width: calc(100% - 2em);
+}
+
+header nav.menucontainer ul li:hover {
+  cursor: pointer;
+  background-color: #311616;
+}
+
+header nav.menucontainer ul li a {
+  font-weight: normal;
+  padding: 1em;
+}
+
+footer {
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  padding: 1em;
+  z-index: 20;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'menu social logo' 'cpr  cpr    cpr';
+  width: calc(100% - 2em);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #1c0d0d;
+}
+
+footer nav.footermenu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: menu;
+}
+
+footer nav.footermenu ul {
+  list-style-type: none;
+}
+
+footer nav.footermenu ul li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+footer nav.footermenu ul li a {
+  cursor: pointer;
+  text-transform: lowercase;
+  text-align: center;
+  font-size: 1rem;
+  color: #fff;
+  padding: 1em .5em;
+}
+
+footer section.footersocial {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: social;
+}
+
+footer section.footersocial a {
+  cursor: pointer;
+  padding: 1em 2em;
+  margin: 0 auto;
+}
+
+footer section.footersocial a img {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+footer section.footerlogo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: logo;
+}
+
+footer section.footerlogo img {
+  float: right;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+footer div.copyright {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: cpr;
+  margin-top: 1em;
+}
+
+footer div.copyright p {
+  text-align: center;
+  font-size: .7em;
+  font-weight: 400;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
