@@ -1,0 +1,78 @@
+footer {
+    position: relative;
+    clear: both;
+    overflow: hidden;
+    padding: 1em;
+    z-index: 20;
+    display: grid;
+    grid-template-areas:'menu menu logo'
+                        'social social logo'
+                        'cpr  cpr    cpr';
+    width: calc(100% - 2em);
+    height: fit-content;
+    background-color: color(footerNav);
+
+    nav.footermenu {
+        grid-area: menu;
+        
+        ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            li {
+                
+                a {
+                    cursor: pointer;
+                    text-transform: lowercase;
+                    text-align: center;
+                    font-size: 1rem;
+                    color: color(textNav);
+                    padding: 1em .7em ;
+                }
+            }
+        }
+    }
+
+    section.footersocial {
+        grid-area: social;
+        margin-top: .5em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        a {
+            cursor: pointer;
+            padding: 1em 1.5em ;
+
+            img{
+                width: 1.5em;
+                height: 1.5em;
+            }
+        }
+    }
+
+    section.footerlogo {
+        grid-area: logo;
+        display: flex;
+        justify-content: space-evenly;
+
+        img{
+            width: 2.5em;
+            height: 2.5em;
+        }
+    }
+
+    div.copyright {
+        grid-area: cpr;
+
+        p {
+            text-align: center;
+            font-size: .7em;
+            font-weight: 400;
+            color: color(textNav);
+        }
+    }
+  }
