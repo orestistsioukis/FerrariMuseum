@@ -1,19 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
-
-html, body {
-  height: 100%;
-  font-family: 'Montserrat';
-}
-
-main {
-  min-height: 100%;
-}
-
 header {
   position: absolute;
   top: 0;
@@ -106,7 +91,7 @@ footer {
   z-index: 20;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'menu social logo' 'cpr  cpr    cpr';
+      grid-template-areas: 'menu menu logo' 'social social logo' 'cpr  cpr    cpr';
   width: calc(100% - 2em);
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -117,16 +102,21 @@ footer {
 footer nav.footermenu {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: menu;
 }
 
 footer nav.footermenu ul {
   list-style-type: none;
-}
-
-footer nav.footermenu ul li {
-  display: inline-block;
-  margin: 0 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 footer nav.footermenu ul li a {
@@ -135,19 +125,29 @@ footer nav.footermenu ul li a {
   text-align: center;
   font-size: 1rem;
   color: #fff;
-  padding: 1em .5em;
+  padding: 1em .7em;
 }
 
 footer section.footersocial {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: social;
+  margin-top: .5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 footer section.footersocial a {
   cursor: pointer;
-  padding: 1em 2em;
-  margin: 0 auto;
+  padding: 1em 1.5em;
 }
 
 footer section.footersocial a img {
@@ -157,22 +157,27 @@ footer section.footersocial a img {
 
 footer section.footerlogo {
   -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
   -ms-grid-column: 3;
   grid-area: logo;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 footer section.footerlogo img {
-  float: right;
-  width: 1.5em;
-  height: 1.5em;
+  width: 2.5em;
+  height: 2.5em;
 }
 
 footer div.copyright {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: cpr;
-  margin-top: 1em;
 }
 
 footer div.copyright p {
@@ -180,5 +185,20 @@ footer div.copyright p {
   font-size: .7em;
   font-weight: 400;
   color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Montserrat';
+}
+
+main {
+  min-height: 100%;
 }
 /*# sourceMappingURL=main.css.map */
