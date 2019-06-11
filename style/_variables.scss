@@ -1,0 +1,13 @@
+$colors: (
+    headerNav: #1c0d0d,
+    footerNav: #1c0d0d,
+    menuContainer: #1c0d0d,
+    menuContainerButtons: #311616,
+    textNav: #fff,
+    primary: #fff,
+    main: green,
+);
+    
+@function color($colorsnames) {
+    @return map-get($colors, $colorsnames);
+}
