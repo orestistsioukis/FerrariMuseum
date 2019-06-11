@@ -1,0 +1,75 @@
+header {
+    position: absolute;
+    top: 0;
+    padding: 1em;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    width: calc(100% - 2em);
+    height: fit-content;
+    background-color: color(headerNav);
+    
+    a {
+        color: color(textNav);
+    }
+
+    a.maintitle {
+        font-weight: bold;
+        text-transform: lowercase;
+    }
+
+    img.menuopenbutton {
+        width: 15px;
+        height: 15px;    
+    }
+
+    nav.menucontainer {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 40;
+        width: 50%;
+        height: 100vh;
+        background-color: color(menuContainer);
+
+        img.menuclosebutton {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1em;
+        }
+
+        img.ferrarimenulogo {
+            display: block;
+            margin: 60px auto 0 auto;
+            width: 8em;
+            height: 8em;
+        }
+
+        ul {
+            display: grid;
+            margin-top: 60px;
+            
+            li {
+                list-style: none;
+                justify-self: center;
+                text-align: center;
+                margin: 1em;
+                padding: 1em;
+                width: calc(100% - 2em);
+                
+                &:hover {
+                    cursor: pointer;
+                    background-color: color(menuContainerButtons);
+                }
+
+                a {
+                    font-weight: normal;
+                    padding: 1em;
+                }
+            }
+        }
+    }
+}
