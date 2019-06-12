@@ -3,9 +3,10 @@ $colors: (
     footerNav: #1c0d0d,
     menuContainer: #1c0d0d,
     menuContainerButtons: #311616,
+    mainBackground: #FF0000,
+    darkBackground: #111,
     textNav: #fff,
-    primary: #fff,
-    main: green,
+    primary: #fff
 );
     
 @function color($colorsnames) {
