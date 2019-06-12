@@ -9,7 +9,7 @@ footer {
                         'social social logo'
                         'cpr  cpr    cpr';
     width: calc(100% - 2em);
-    height: fit-content;
+    height: 100px;
     background-color: color(footerNav);
 
     nav.footermenu {
@@ -27,7 +27,7 @@ footer {
                     cursor: pointer;
                     text-transform: lowercase;
                     text-align: center;
-                    font-size: 1rem;
+                    font-size: 1em;
                     color: color(textNav);
                     padding: 1em .7em ;
                 }
@@ -75,4 +75,54 @@ footer {
             color: color(textNav);
         }
     }
+  }
+
+  @media only screen and (min-width: 768px) {
+    footer {
+        grid-template-areas:'menu social logo'
+                            'cpr  cpr    cpr';
+        height: fit-content;
+    
+        nav.footermenu {
+            grid-area: menu;
+                    
+            ul {
+                flex-direction: column;
+                align-items: flex-start;
+                
+                li {
+                    margin: .5em 70% .5em 30%;
+                    
+                    a {
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+    
+        section.footersocial {
+            margin-top: 0;
+            flex-direction: row;
+            align-items: center;
+    
+            a {
+                padding: 1em;
+    
+                img{
+                    width: 2.5em;
+                    height: 2.5em;
+                }
+            }
+        }
+    
+        section.footerlogo {
+            justify-content: flex-end;
+            align-items: center;
+    
+            img{
+                width: 3em;
+                height: 3em;
+            }
+        }
+      }
   }

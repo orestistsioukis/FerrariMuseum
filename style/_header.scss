@@ -7,7 +7,7 @@ header {
     justify-content: space-between;
     overflow: hidden;
     width: calc(100% - 2em);
-    height: fit-content;
+    height: 20px;
     background-color: color(headerNav);
     
     a {
@@ -15,13 +15,15 @@ header {
     }
 
     a.maintitle {
+        font-size: 1.1em;
         font-weight: bold;
         text-transform: lowercase;
     }
 
     img.menuopenbutton {
         width: 15px;
-        height: 15px;    
+        height: 15px;
+        margin: auto 0;    
     }
 
     nav.menucontainer {
@@ -70,6 +72,21 @@ header {
                     padding: 1em;
                 }
             }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        height: fit-content;
+
+        a.maintitle {
+            font-size: 1.4em;
+        }
+        
+        img.menuopenbutton {
+            width: 18px;
+            height: 18px;
         }
     }
 }
