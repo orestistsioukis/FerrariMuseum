@@ -39,8 +39,8 @@ aside.sidebarmenu {
   right: 0;
   z-index: 40;
   width: 50%;
-  max-width: 187.5px;
-  height: 100%;
+  max-width: 200px;
+  height: 100vh;
   background-color: #1c0d0d;
 }
 
@@ -83,10 +83,6 @@ aside.sidebarmenu ul li:hover {
 aside.sidebarmenu ul li a {
   font-weight: normal;
   padding: 1em;
-}
-
-.showmenu {
-  display: block;
 }
 
 @media only screen and (min-width: 768px) {

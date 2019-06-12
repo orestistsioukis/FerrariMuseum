@@ -34,10 +34,10 @@ aside.sidebarmenu {
     right: 0;
     z-index: 40;
     width: 50%;
-    max-width: 187.5px;
-    height: 100%;
+    max-width: 200px;
+    height: 100vh;
     background-color: color(menuContainer);
-
+    
     img.menuclosebutton {
         position: absolute;
         top: 0;
@@ -78,14 +78,11 @@ aside.sidebarmenu {
     }
 }
 
-.showmenu {
-    display: block;
-}
 
 @media only screen and (min-width: 768px) {
     header {
         height: fit-content;
-
+        
         a.maintitle {
             font-size: 1.4em;
         }
