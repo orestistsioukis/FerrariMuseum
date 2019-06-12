@@ -12,9 +12,7 @@ header {
           justify-content: space-between;
   overflow: hidden;
   width: calc(100% - 2em);
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 20px;
   background-color: #1c0d0d;
 }
 
@@ -23,6 +21,7 @@ header a {
 }
 
 header a.maintitle {
+  font-size: 1.1em;
   font-weight: bold;
   text-transform: lowercase;
 }
@@ -30,6 +29,7 @@ header a.maintitle {
 header img.menuopenbutton {
   width: 15px;
   height: 15px;
+  margin: auto 0;
 }
 
 header nav.menucontainer {
@@ -83,6 +83,21 @@ header nav.menucontainer ul li a {
   padding: 1em;
 }
 
+@media only screen and (min-width: 768px) {
+  header {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  header a.maintitle {
+    font-size: 1.4em;
+  }
+  header img.menuopenbutton {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 footer {
   position: relative;
   clear: both;
@@ -93,9 +108,7 @@ footer {
   display: grid;
       grid-template-areas: 'menu menu logo' 'social social logo' 'cpr  cpr    cpr';
   width: calc(100% - 2em);
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100px;
   background-color: #1c0d0d;
 }
 
@@ -123,7 +136,7 @@ footer nav.footermenu ul li a {
   cursor: pointer;
   text-transform: lowercase;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1em;
   color: #fff;
   padding: 1em .7em;
 }
@@ -187,6 +200,64 @@ footer div.copyright p {
   color: #fff;
 }
 
+@media only screen and (min-width: 768px) {
+  footer {
+        grid-template-areas: 'menu social logo' 'cpr  cpr    cpr';
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  footer nav.footermenu {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: menu;
+  }
+  footer nav.footermenu ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  footer nav.footermenu ul li {
+    margin: .5em 70% .5em 30%;
+  }
+  footer nav.footermenu ul li a {
+    font-size: 1.2em;
+  }
+  footer section.footersocial {
+    margin-top: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer section.footersocial a {
+    padding: 1em;
+  }
+  footer section.footersocial a img {
+    width: 2.5em;
+    height: 2.5em;
+  }
+  footer section.footerlogo {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer section.footerlogo img {
+    width: 3em;
+    height: 3em;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -199,6 +270,92 @@ html, body {
 }
 
 main {
+  padding-top: calc(20px + 2em);
+  padding-bottom: -calc(100px + 2em);
   min-height: 100%;
+  overflow: auto;
+}
+
+div.mainwrapper {
+  width: 100%;
+  height: 185px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'greeting  emblem';
+  background-color: #FF0000;
+}
+
+div.mainwrapper section.greeting {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: greeting;
+}
+
+div.mainwrapper section.greeting h2 {
+  color: #fff;
+  padding: 1em 1em 1em 12px;
+  text-align: left;
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
+div.mainwrapper section.greeting p {
+  color: #fff;
+  padding: 0 1em 1em 12px;
+  text-align: left;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.4em;
+}
+
+div.mainwrapper section.emblemlogo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: emblem;
+}
+
+div.mainwrapper section.emblemlogo img {
+  padding: 1em;
+  width: calc(100% - 2em);
+  height: calc(185px - 2em);
+  overflow: hidden;
+}
+
+div.mainimage {
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+div.mainimage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  translate: right bottom;
+}
+
+@media only screen and (min-width: 768px) {
+  div.mainwrapper {
+    height: 200px;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+  }
+  div.mainwrapper section.greeting h2 {
+    font-size: 2.2em;
+    padding: 1em 1em 1em 40px;
+  }
+  div.mainwrapper section.greeting p {
+    font-size: 1.2em;
+    padding: 1em 1em 1em 40px;
+  }
+  div.mainwrapper section.emblemlogo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: emblem;
+  }
+  div.mainwrapper section.emblemlogo img {
+    height: calc(200px - 2em);
+  }
 }
 /*# sourceMappingURL=main.css.map */
