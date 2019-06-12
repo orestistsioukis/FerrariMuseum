@@ -1,11 +1,11 @@
-const openMenu = document.querySelector('.menuopenbutton');
-const closeMenu = document.querySelector('.menuclosebutton');
-const animMenu = document.querySelector('#sidebarmenu');
+const openMenu = document.getElementById('menuopenbutton');
+const closeMenu = document.getElementById('menuclosebutton');
+const animMenu = document.getElementById('sidebarmenu');
 
 openMenu.addEventListener('click', function () {
-    animMenu.classList.add('showmenu');
+    animMenu.style.display = 'block';
 });
 
 closeMenu.addEventListener('click', function () {
-    animMenu.classList.remove('showmenu');
+    animMenu.style.display = 'none';
 });
