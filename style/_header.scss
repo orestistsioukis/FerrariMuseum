@@ -25,55 +25,61 @@ header {
         height: 15px;
         margin: auto 0;    
     }
+}
 
-    nav.menucontainer {
-        display: none;
+aside.sidebarmenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 40;
+    width: 50%;
+    max-width: 187.5px;
+    height: 100%;
+    background-color: color(menuContainer);
+
+    img.menuclosebutton {
         position: absolute;
         top: 0;
         right: 0;
-        z-index: 40;
-        width: 50%;
-        height: 100vh;
-        background-color: color(menuContainer);
+        padding: 1em;
+    }
 
-        img.menuclosebutton {
-            position: absolute;
-            top: 0;
-            right: 0;
+    img.ferrarimenulogo {
+        display: block;
+        margin: 60px auto 0 auto;
+        width: 8em;
+        height: 8em;
+        z-index: 30;
+    }
+
+    ul {
+        display: grid;
+        margin-top: 60px;
+        
+        li {
+            list-style: none;
+            justify-self: center;
+            text-align: center;
+            margin: 1em;
             padding: 1em;
-        }
-
-        img.ferrarimenulogo {
-            display: block;
-            margin: 60px auto 0 auto;
-            width: 8em;
-            height: 8em;
-        }
-
-        ul {
-            display: grid;
-            margin-top: 60px;
+            width: calc(100% - 2em);
             
-            li {
-                list-style: none;
-                justify-self: center;
-                text-align: center;
-                margin: 1em;
-                padding: 1em;
-                width: calc(100% - 2em);
-                
-                &:hover {
-                    cursor: pointer;
-                    background-color: color(menuContainerButtons);
-                }
+            &:hover {
+                cursor: pointer;
+                background-color: color(menuContainerButtons);
+            }
 
-                a {
-                    font-weight: normal;
-                    padding: 1em;
-                }
+            a {
+                font-weight: normal;
+                padding: 1em;
             }
         }
     }
+}
+
+.showmenu {
+    display: block;
 }
 
 @media only screen and (min-width: 768px) {
