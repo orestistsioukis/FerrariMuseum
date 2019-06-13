@@ -30,6 +30,7 @@ div.mainwrapper {
     height: 185px;
     display: grid;
     grid-template-areas:'greeting  emblem';
+    grid-template-columns: 2fr 1fr;
     background-color: color(mainBackground);
 
     section.greeting {
@@ -37,7 +38,7 @@ div.mainwrapper {
 
         h2 {
             color: color(primary);
-            padding: 1em 1em 1em 12px;
+            padding: 1.2em 1em 1em 12px;
             text-align: left;
             font-size: 1.6em;
             font-weight: 700;
@@ -45,7 +46,7 @@ div.mainwrapper {
 
         p {
             color: color(primary);
-            padding: 0 1em 1em 12px;
+            padding: 1em 1em 1em 12px;
             text-align: left;
             font-size: 1em;
             font-weight: 400;
@@ -80,29 +81,26 @@ div.mainimage {
 
 @media only screen and (min-width: 768px) {
     div.mainwrapper {
+        position: absolute;
+        top: 59px;
+        max-width: 500px;
         height: 200px;
-        grid-template-columns: 2fr 1fr;
-    
-        section.greeting {
-    
-            h2 {
-                font-size: 2.2em;
-                padding: 1em 1em 1em 40px;
-            }
-    
-            p {
-                font-size: 1.2em;
-                padding: 1em 1em 1em 40px;
-            }
-        }
-    
+        grid-template-columns: 3fr 1fr;
+        z-index: 10;
+           
         section.emblemlogo {
-            grid-area: emblem;
             
             img {
                 height: calc(200px - 2em);
             }
         }
+    }
+
+    div.mainimage {
+        position: absolute;
+        top: 58px;
+        height: 100vh ;
+        z-index: 0;
     }
 }
 

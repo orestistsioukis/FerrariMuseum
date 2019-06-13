@@ -244,8 +244,8 @@ footer div.copyright p {
     padding: 1em;
   }
   footer section.footersocial a img {
-    width: 2.5em;
-    height: 2.5em;
+    width: 2.2em;
+    height: 2.2em;
   }
   footer section.footerlogo {
     -webkit-box-pack: end;
@@ -285,6 +285,8 @@ div.mainwrapper {
   display: -ms-grid;
   display: grid;
       grid-template-areas: 'greeting  emblem';
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
   background-color: #FF0000;
 }
 
@@ -296,7 +298,7 @@ div.mainwrapper section.greeting {
 
 div.mainwrapper section.greeting h2 {
   color: #fff;
-  padding: 1em 1em 1em 12px;
+  padding: 1.2em 1em 1em 12px;
   text-align: left;
   font-size: 1.6em;
   font-weight: 700;
@@ -304,7 +306,7 @@ div.mainwrapper section.greeting h2 {
 
 div.mainwrapper section.greeting p {
   color: #fff;
-  padding: 0 1em 1em 12px;
+  padding: 1em 1em 1em 12px;
   text-align: left;
   font-size: 1em;
   font-weight: 400;
@@ -340,25 +342,22 @@ div.mainimage img {
 
 @media only screen and (min-width: 768px) {
   div.mainwrapper {
+    position: absolute;
+    top: 59px;
+    max-width: 500px;
     height: 200px;
-    -ms-grid-columns: 2fr 1fr;
-        grid-template-columns: 2fr 1fr;
-  }
-  div.mainwrapper section.greeting h2 {
-    font-size: 2.2em;
-    padding: 1em 1em 1em 40px;
-  }
-  div.mainwrapper section.greeting p {
-    font-size: 1.2em;
-    padding: 1em 1em 1em 40px;
-  }
-  div.mainwrapper section.emblemlogo {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: emblem;
+    -ms-grid-columns: 3fr 1fr;
+        grid-template-columns: 3fr 1fr;
+    z-index: 10;
   }
   div.mainwrapper section.emblemlogo img {
     height: calc(200px - 2em);
+  }
+  div.mainimage {
+    position: absolute;
+    top: 58px;
+    height: 100vh;
+    z-index: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
