@@ -38,11 +38,18 @@ aside {
     height: 100vh;
     background-color: color(menuContainer);
     
+    // animation keyframes slide-menu
+    transform: scaleX(0);
+    transform-origin: right;
+    
     img.menuclosebutton {
         position: absolute;
         top: 0;
         right: 0;
         padding: 1em;
+
+        // animation keyframes slide-menu
+        opacity: 0;
     }
     
     img.ferrarimenulogo {
@@ -51,6 +58,9 @@ aside {
         width: 8em;
         height: 8em;
         z-index: 30;
+
+        // animation keyframes slide-menu
+        opacity: 0;
     }
     
     ul {
@@ -65,6 +75,9 @@ aside {
             padding: 1em;
             width: calc(100% - 2em);
             
+            // animation keyframes slide-menu
+            opacity: 0;     
+
             &:hover {
                 cursor: pointer;
                 background-color: color(menuContainerButtons);
@@ -95,6 +108,55 @@ aside {
     }
 }
 
+// animation side menu
 .show-menu {
     display: block;
+    animation: slide-menu 1s ease-in forwards;
+
+    .menuclosebutton {
+        animation: show-x 1s 1s forwards;
+    }
+
+    .ferrarimenulogo {
+        animation: menu-item-anim .6s forwards 1s ease-in-out;
+    }
+
+    li:nth-of-type(1) {
+        animation: menu-item-anim .6s forwards 1.2s ease-in-out;
+    }
+    li:nth-of-type(2) {
+        animation: menu-item-anim .6s forwards 1.4s ease-in-out;
+    }
+    li:nth-of-type(3) {
+        animation: menu-item-anim .6s forwards 1.6s ease-in-out;
+    }
+}
+
+@keyframes slide-menu {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes show-x {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes menu-item-anim {
+    from {
+        transform: translateY(30%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
