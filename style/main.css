@@ -81,7 +81,8 @@ aside.sidebarmenu ul li:hover {
 }
 
 aside.sidebarmenu ul li a {
-  font-weight: normal;
+  color: #f1f090;
+  font-weight: bold;
   padding: 1em;
 }
 

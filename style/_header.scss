@@ -69,9 +69,10 @@ aside.sidebarmenu {
                 cursor: pointer;
                 background-color: color(menuContainerButtons);
             }
-
+            
             a {
-                font-weight: normal;
+                color: color(menuButtonsText);
+                font-weight: bold;
                 padding: 1em;
             }
         }
