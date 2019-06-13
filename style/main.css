@@ -110,33 +110,33 @@ aside ul li a {
 
 .show-menu {
   display: block;
-  -webkit-animation: slide-menu 1s ease-in forwards;
-          animation: slide-menu 1s ease-in forwards;
+  -webkit-animation: slide-menu .5s ease-in forwards;
+          animation: slide-menu .5s ease-in forwards;
 }
 
 .show-menu .menuclosebutton {
-  -webkit-animation: show-x 1s 1s forwards;
-          animation: show-x 1s 1s forwards;
+  -webkit-animation: show-x 1s .4s forwards;
+          animation: show-x 1s .4s forwards;
 }
 
 .show-menu .ferrarimenulogo {
-  -webkit-animation: menu-item-anim .6s forwards 1s ease-in-out;
-          animation: menu-item-anim .6s forwards 1s ease-in-out;
+  -webkit-animation: menu-item-anim .6s forwards .4s ease-in-out;
+          animation: menu-item-anim .6s forwards .4s ease-in-out;
 }
 
 .show-menu li:nth-of-type(1) {
-  -webkit-animation: menu-item-anim .6s forwards 1.2s ease-in-out;
-          animation: menu-item-anim .6s forwards 1.2s ease-in-out;
+  -webkit-animation: menu-item-anim .6s forwards .6s ease-in-out;
+          animation: menu-item-anim .6s forwards .6s ease-in-out;
 }
 
 .show-menu li:nth-of-type(2) {
-  -webkit-animation: menu-item-anim .6s forwards 1.4s ease-in-out;
-          animation: menu-item-anim .6s forwards 1.4s ease-in-out;
+  -webkit-animation: menu-item-anim .6s forwards .8s ease-in-out;
+          animation: menu-item-anim .6s forwards .8s ease-in-out;
 }
 
 .show-menu li:nth-of-type(3) {
-  -webkit-animation: menu-item-anim .6s forwards 1.6s ease-in-out;
-          animation: menu-item-anim .6s forwards 1.6s ease-in-out;
+  -webkit-animation: menu-item-anim .6s forwards 1s ease-in-out;
+          animation: menu-item-anim .6s forwards 1s ease-in-out;
 }
 
 @-webkit-keyframes slide-menu {
