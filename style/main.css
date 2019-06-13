@@ -32,7 +32,7 @@ header img.menuopenbutton {
   margin: auto 0;
 }
 
-aside.sidebarmenu {
+aside {
   display: none;
   position: absolute;
   top: 0;
@@ -44,14 +44,14 @@ aside.sidebarmenu {
   background-color: #1c0d0d;
 }
 
-aside.sidebarmenu img.menuclosebutton {
+aside img.menuclosebutton {
   position: absolute;
   top: 0;
   right: 0;
   padding: 1em;
 }
 
-aside.sidebarmenu img.ferrarimenulogo {
+aside img.ferrarimenulogo {
   display: block;
   margin: 60px auto 0 auto;
   width: 8em;
@@ -59,13 +59,13 @@ aside.sidebarmenu img.ferrarimenulogo {
   z-index: 30;
 }
 
-aside.sidebarmenu ul {
+aside ul {
   display: -ms-grid;
   display: grid;
   margin-top: 60px;
 }
 
-aside.sidebarmenu ul li {
+aside ul li {
   list-style: none;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -75,12 +75,12 @@ aside.sidebarmenu ul li {
   width: calc(100% - 2em);
 }
 
-aside.sidebarmenu ul li:hover {
+aside ul li:hover {
   cursor: pointer;
   background-color: #311616;
 }
 
-aside.sidebarmenu ul li a {
+aside ul li a {
   color: #f1f090;
   font-weight: bold;
   padding: 1em;
@@ -99,6 +99,10 @@ aside.sidebarmenu ul li a {
     width: 18px;
     height: 18px;
   }
+}
+
+.show-menu {
+  display: block;
 }
 
 footer {

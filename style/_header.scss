@@ -27,7 +27,7 @@ header {
     }
 }
 
-aside.sidebarmenu {
+aside {
     display: none;
     position: absolute;
     top: 0;
@@ -44,7 +44,7 @@ aside.sidebarmenu {
         right: 0;
         padding: 1em;
     }
-
+    
     img.ferrarimenulogo {
         display: block;
         margin: 60px auto 0 auto;
@@ -52,7 +52,7 @@ aside.sidebarmenu {
         height: 8em;
         z-index: 30;
     }
-
+    
     ul {
         display: grid;
         margin-top: 60px;
@@ -93,4 +93,8 @@ aside.sidebarmenu {
             height: 18px;
         }
     }
+}
+
+.show-menu {
+    display: block;
 }
