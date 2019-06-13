@@ -1,4 +1,88 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  background-color: #111;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loader img {
+  position: absolute;
+  top: 35%;
+  width: 90px;
+  height: calc(56.25% * 90px);
+}
+
+.loader .bar {
+  position: absolute;
+  top: 60%;
+  width: 20px;
+  height: 10px;
+  background-color: #fff012;
+  border: 1px solid #fff012;
+  border-radius: 50%;
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  -webkit-animation: loading  2s infinite ease-in-out;
+          animation: loading  2s infinite ease-in-out;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: translate(-20px, 0px);
+            transform: translate(-20px, 0px);
+  }
+  25% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  50% {
+    -webkit-transform: translate(20px, 0px);
+            transform: translate(20px, 0px);
+  }
+  75% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(-20px, 0px);
+            transform: translate(-20px, 0px);
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-transform: translate(-20px, 0px);
+            transform: translate(-20px, 0px);
+  }
+  25% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  50% {
+    -webkit-transform: translate(20px, 0px);
+            transform: translate(20px, 0px);
+  }
+  75% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(-20px, 0px);
+            transform: translate(-20px, 0px);
+  }
+}
+
 header {
   position: absolute;
   top: 0;
