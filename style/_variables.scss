@@ -6,10 +6,24 @@ $colors: (
     menuButtonsText: #f1f090,
     mainBackground: #FF0000,
     darkBackground: #111,
+    historyBackground1: #dd2929,
+    historyBackground2: #653E3E,
     textNav: #fff,
     primary: #fff
+);
+$fonts: (
+    h2Mobile: 1.6em,
+    h2Large: 1.8em,
+    pMobile: 1.2em,
+    pLarge: 1.4em,
+    aMobile: 1.2em,
+    aLarge: 1.4em,
+    copyright: .7em
 );
     
 @function color($colorsnames) {
     @return map-get($colors, $colorsnames);
+}
+@function font($fontsnames) {
+    @return map-get($fonts, $fontsnames);
 }

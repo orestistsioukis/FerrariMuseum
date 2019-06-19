@@ -15,7 +15,7 @@ header {
     }
 
     a.maintitle {
-        font-size: 1.1em;
+        font-size: font(aMobile);
         font-weight: bold;
         text-transform: lowercase;
     }
@@ -86,7 +86,8 @@ aside {
             a {
                 color: color(menuButtonsText);
                 font-weight: bold;
-                padding: 1em;
+                font-size: font(aMobile);
+                padding: .6em;
             }
         }
     }
@@ -98,7 +99,7 @@ aside {
         height: fit-content;
         
         a.maintitle {
-            font-size: 1.4em;
+            font-size: font(aLarge);
         }
         
         img.menuopenbutton {
