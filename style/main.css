@@ -476,15 +476,24 @@ div.historywrapper div.arrow {
   display: block;
   position: fixed;
   top: 50%;
-  left: 0;
-  width: 18px;
-  height: 18px;
   z-index: 10000;
 }
 
 div.historywrapper div.arrow img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 60px;
+  height: 60px;
+}
+
+div.historywrapper #arrow-left {
+  left: 0;
+  margin-left: .2em;
+  opacity: .9;
+}
+
+div.historywrapper #arrow-right {
+  right: 0;
+  margin-right: .2em;
+  opacity: .9;
 }
 
 div.historywrapper div.slide {
@@ -492,12 +501,21 @@ div.historywrapper div.slide {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  min-height: 100vh;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+div.historywrapper div.slide:nth-child(2n) {
   background-color: #dd2929;
+}
+
+div.historywrapper div.slide:nth-child(2n+1) {
+  background-color: #653E3E;
 }
 
 div.historywrapper div.slide section.historysection {
@@ -522,6 +540,7 @@ div.historywrapper div.slide section.historysection article {
   text-align: center;
   font-size: 1.2em;
   font-weight: 400;
+  line-height: 1.4em;
 }
 
 div.historywrapper div.slide section.historyimages {
