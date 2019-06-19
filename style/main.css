@@ -1,88 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
-.loader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10000;
-  background-color: #111;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.loader img {
-  position: absolute;
-  top: 35%;
-  width: 90px;
-  height: calc(56.25% * 90px);
-}
-
-.loader .bar {
-  position: absolute;
-  top: 60%;
-  width: 20px;
-  height: 10px;
-  background-color: #fff012;
-  border: 1px solid #fff012;
-  border-radius: 50%;
-  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
-  -webkit-animation: loading  2s infinite ease-in-out;
-          animation: loading  2s infinite ease-in-out;
-}
-
-@-webkit-keyframes loading {
-  0% {
-    -webkit-transform: translate(-20px, 0px);
-            transform: translate(-20px, 0px);
-  }
-  25% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
-  50% {
-    -webkit-transform: translate(20px, 0px);
-            transform: translate(20px, 0px);
-  }
-  75% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
-  100% {
-    -webkit-transform: translate(-20px, 0px);
-            transform: translate(-20px, 0px);
-  }
-}
-
-@keyframes loading {
-  0% {
-    -webkit-transform: translate(-20px, 0px);
-            transform: translate(-20px, 0px);
-  }
-  25% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
-  50% {
-    -webkit-transform: translate(20px, 0px);
-            transform: translate(20px, 0px);
-  }
-  75% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
-  100% {
-    -webkit-transform: translate(-20px, 0px);
-            transform: translate(-20px, 0px);
-  }
-}
-
 header {
   position: absolute;
   top: 0;
@@ -105,7 +21,7 @@ header a {
 }
 
 header a.maintitle {
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: bold;
   text-transform: lowercase;
 }
@@ -174,7 +90,8 @@ aside ul li:hover {
 aside ul li a {
   color: #f1f090;
   font-weight: bold;
-  padding: 1em;
+  font-size: 1.2em;
+  padding: .6em;
 }
 
 @media only screen and (min-width: 768px) {
@@ -327,7 +244,7 @@ footer nav.footermenu ul li a {
   cursor: pointer;
   text-transform: lowercase;
   text-align: center;
-  font-size: 1em;
+  font-size: 1.2em;
   color: #fff;
   padding: 1em .7em;
 }
@@ -386,7 +303,7 @@ footer div.copyright {
 
 footer div.copyright p {
   text-align: center;
-  font-size: .7em;
+  font-size: 0.7em;
   font-weight: 400;
   color: #fff;
 }
@@ -416,7 +333,7 @@ footer div.copyright p {
     margin: .5em 70% .5em 30%;
   }
   footer nav.footermenu ul li a {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
   footer section.footersocial {
     margin-top: 0;
@@ -429,7 +346,7 @@ footer div.copyright p {
             align-items: center;
   }
   footer section.footersocial a {
-    padding: 1em;
+    padding: 1.4em;
   }
   footer section.footersocial a img {
     width: 2.2em;
@@ -469,7 +386,9 @@ main {
 
 div.mainwrapper {
   width: 100%;
-  height: 185px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: -ms-grid;
   display: grid;
       grid-template-areas: 'greeting  emblem';
@@ -494,9 +413,9 @@ div.mainwrapper section.greeting h2 {
 
 div.mainwrapper section.greeting p {
   color: #fff;
-  padding: 1em 1em 1em 12px;
+  padding: 0 1em .8em 12px;
   text-align: left;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 400;
   line-height: 1.4em;
 }
@@ -547,5 +466,78 @@ div.mainimage img {
     height: 100vh;
     z-index: 0;
   }
+}
+
+div.historywrapper {
+  background-color: #fff;
+}
+
+div.historywrapper div.arrow {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  z-index: 10000;
+}
+
+div.historywrapper div.arrow img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+div.historywrapper div.slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #dd2929;
+}
+
+div.historywrapper div.slide section.historysection {
+  padding: 1em;
+  margin: 1em 0;
+  width: calc(100% - 2em);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+div.historywrapper div.slide section.historysection h2 {
+  color: #fff;
+  margin-bottom: 1em;
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
+div.historywrapper div.slide section.historysection article {
+  color: #fff;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+div.historywrapper div.slide section.historyimages {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: visible;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.historywrapper div.slide section.historyimages img {
+  max-width: 100%;
 }
 /*# sourceMappingURL=main.css.map */

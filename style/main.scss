@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
 @import './variables';
-@import './loader';
+// @import './loader';
 @import './header';
 @import './footer';
 
@@ -26,9 +26,10 @@ main {
     overflow: auto;
 }
 
+// index.html
 div.mainwrapper {
     width: 100%;
-    height: 185px;
+    height: fit-content;
     display: grid;
     grid-template-areas:'greeting  emblem';
     grid-template-columns: 2fr 1fr;
@@ -41,15 +42,15 @@ div.mainwrapper {
             color: color(primary);
             padding: 1.2em 1em 1em 12px;
             text-align: left;
-            font-size: 1.6em;
+            font-size: font(h2Mobile);
             font-weight: 700;
         }
 
         p {
             color: color(primary);
-            padding: 1em 1em 1em 12px;
+            padding: 0 1em .8em 12px;
             text-align: left;
-            font-size: 1em;
+            font-size: font(pMobile);
             font-weight: 400;
             line-height: 1.4em;
         }
@@ -103,4 +104,67 @@ div.mainimage {
         height: 100vh ;
         z-index: 0;
     }
+}
+
+// HISTORY.HTML
+
+div.historywrapper {
+    background-color: color(primary);
+
+    div.arrow {
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        z-index: 10000;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    div.slide {
+        display: flex;
+        height: 100%;
+        min-height: 100vh;
+        flex-direction: column;
+        background-color: color(historyBackground1);
+
+        section.historysection {
+            padding: 1em;
+            margin: 1em 0;
+            width: calc(100% - 2em);
+            height: fit-content;
+            
+            h2 {
+                color: color(primary);
+                margin-bottom: 1em;
+                text-align: center;
+                font-size: font(h2Mobile);
+                font-weight: 700;
+            }
+            article {
+                color: color(primary);
+                text-align: center;
+                font-size: font(pMobile);
+                font-weight: 400;
+            }
+        }
+        
+        section.historyimages {
+            width: 100%;
+            height: fit-content;
+            overflow: visible;
+            // image to the center
+            display: grid;
+            justify-content: center;
+            
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    
 }
