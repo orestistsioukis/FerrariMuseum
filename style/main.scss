@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
 @import './variables';
-// @import './loader';
+@import './loader';
 @import './header';
 @import './footer';
 
@@ -109,13 +109,13 @@ div.mainimage {
 // HISTORY.HTML
 
 div.historywrapper {
-    background-color: color(primary);
+    position: relative;
 
     div.arrow {
         display: block;
         position: fixed;
         top: 50%;
-        z-index: 10000;
+        z-index: 100;
         
         img {
             width: 60px;
@@ -125,12 +125,20 @@ div.historywrapper {
     #arrow-left {
         left: 0;
         margin-left: .2em;
-        opacity: .9;
+        opacity: .4;
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
     }
     #arrow-right {
         right: 0;
         margin-right: .2em;
-        opacity: .9;
+        opacity: .4;
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
     }
 
 
@@ -171,16 +179,42 @@ div.historywrapper {
         
         section.historyimages {
             width: 100%;
-            height: fit-content;
+            height: 100%;
             overflow: visible;
-            // image to the center
             display: grid;
+            grid-template-rows: 50% 50%;
             justify-content: center;
             
             img {
                 max-width: 100%;
+                overflow: hidden;
             }
         }
     }
-    
+}
+
+@media only screen and (min-width: 768px) {
+    div.historywrapper {
+        div.arrow {
+            img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+        div.slide {
+            section.historysection {
+                padding: 1em;
+                margin: 1em 0;
+                width: calc(100% - 2em);
+                height: fit-content;
+                
+                h2 {
+                    font-size: font(h2Large);
+                }
+                article {
+                    font-size: font(pLarge);
+                }
+            }
+        }
+    }
 }
