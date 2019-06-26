@@ -106,7 +106,7 @@ header a {
 
 header a.maintitle {
   font-size: 1.2em;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: lowercase;
 }
 
@@ -114,6 +114,10 @@ header img.menuopenbutton {
   width: 15px;
   height: 15px;
   margin: auto 0;
+}
+
+header img.menuopenbutton:hover {
+  cursor: pointer;
 }
 
 aside {
@@ -138,6 +142,10 @@ aside img.menuclosebutton {
   right: 0;
   padding: 1em;
   opacity: 0;
+}
+
+aside img.menuclosebutton:hover {
+  cursor: pointer;
 }
 
 aside img.ferrarimenulogo {

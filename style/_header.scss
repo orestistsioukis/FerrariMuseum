@@ -16,14 +16,18 @@ header {
 
     a.maintitle {
         font-size: font(aMobile);
-        font-weight: bold;
+        font-weight: 700;
         text-transform: lowercase;
     }
 
     img.menuopenbutton {
         width: 15px;
         height: 15px;
-        margin: auto 0;    
+        margin: auto 0;
+        
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
@@ -50,6 +54,10 @@ aside {
 
         // animation keyframes slide-menu
         opacity: 0;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
     
     img.ferrarimenulogo {
