@@ -188,6 +188,9 @@ div.historywrapper {
             img {
                 max-width: 100%;
                 overflow: hidden;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
     }

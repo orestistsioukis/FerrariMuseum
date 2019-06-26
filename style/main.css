@@ -653,6 +653,9 @@ div.historywrapper div.slide section.historyimages {
 div.historywrapper div.slide section.historyimages img {
   max-width: 100%;
   overflow: hidden;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media only screen and (min-width: 768px) {
